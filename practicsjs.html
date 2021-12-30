@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dom Practice</title>
+</head>
+<body>
+    <div id="firstdiv">
+        <h1 id="firstheading">
+            My First Heading
+        </h1>
+        <!-- Comment -->
+    </div>
+    <section id="section1">
+        <h3 id="sectionHeading">
+            heading section
+        </h3>
+    </section>
+     <script>
+        // Node Object Properties
+        // var  info=document.getElementById("firstdiv");
+        // document.write(info.nodeName + "<br>")
+        // document.write(info.nodeValue + "<br>")
+        // document.write(info.nodeType + "<br>")
+        // document.write(info.textContent + "<br>")
+        // document.write(info.parentElement + "<br>")
+        // document.write(info.parentNode + "<br>")
+        // document.write(info.childNodes + "<br>")
+        // document.write(info.firstChild + "<br>")
+        // document.write(info.lastChild + "<br>")
+        // document.write(info.previousSibling + "<br>")
+        // document.write(info.nextSibling + "<br>")
+
+
+
+
+
+        //Creating Nodes and Appending
+
+        document.body.onload = addElement;
+        function addElement() {
+            // create a new div element
+            const newDiv = document.createElement("div");
+
+            // and give it some content
+            const newContent = document.createTextNode("Hi there and greetings!");
+
+            // add the text node to the newly created div
+            newDiv.appendChild(newContent);
+
+            // add the newly created element and its content into the DOM
+            const currentDiv = document.getElementById("firstdiv");
+            document.body.insertBefore(newDiv, currentDiv)
+        }
+    </script>
+
+
+</body>
+
+</html>
